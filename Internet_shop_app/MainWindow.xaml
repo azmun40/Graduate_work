@@ -16,7 +16,17 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="1">
             <Label Content="Магазин товаров" Foreground="White" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,50,0,0"/>
-            <ListBox MaxHeight="200">
+            <ListBox x:Name="ListItems" Margin="0,40,0,0" MaxHeight="270">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock x:Name="name" Text="{Binding name}" Foreground="White" FontSize="16"/>
+                            <TextBlock x:Name="title" Text="{Binding title}" Foreground="White"/>
+                            <TextBlock x:Name="price" Text="{Binding price}" Foreground="White"/>
+
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
             </ListBox>
         </StackPanel>
         <StackPanel Grid.Column="0">
