@@ -27,7 +27,7 @@ namespace Internet_shop_app.Models
         }
 
 
-        public string GetImg()
+        public string GetImg(string img)
         {
             return "/img/" + img;
         }

@@ -10,12 +10,13 @@ namespace Internet_shop_app
 {
     internal class AppDBContext : DbContext
     {
-            public DbSet<Item> items { get; set; }
+            public DbSet<Item> items { get ; set; }
             protected override void OnConfiguring(DbContextOptionsBuilder options)
             {
                 options.UseMySql("server=localhost;username=root;password=root;port=3306;database=internet_shop");
             }
-        }
+
+    }
 
 }
 
